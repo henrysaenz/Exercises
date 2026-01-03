@@ -22,13 +22,13 @@ Constraints:
 strs[i] consists of only lowercase English letters if it is non-empty.
 
 """
-from pyro import module
-import List from typing module
+from typing import List
+
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         if not strs:
             return ""        
-        n = min(len(palabra for palabra in strs)) 
+        n = min(len(palabra) for palabra in strs)
         prefijo = ""
         for i in range(n):
             letra_actual = strs[0][i]
